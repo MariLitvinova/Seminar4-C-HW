@@ -38,8 +38,15 @@ int[] Array(){
    return array;
 }
 void ShowArray (int[] array){
+    Console.Write("[");
     for (int i = 0; i < array.Length; i++){
-        Console.Write($"{array[i]} ");
+       if(array.Length != (i+1)){
+            Console.Write($"{array[i]}, ");
+       }
+       else{
+            Console.Write($"{array[i]}]");
+       }
+        
     }
 }
 ShowArray(Array());
